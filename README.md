@@ -1,6 +1,5 @@
 - 👋 Hi, I’m @fmt91
 - 👀 I’m interested in everything
-- 🌱 I’m currently learning python
 - 📫 Reach me via email
 
 <!---
