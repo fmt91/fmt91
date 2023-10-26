@@ -1,0 +1,8 @@
+Rancher fleet local cluster error
+[After local cluster accidentaly moved into flee-default namespace] # I dont know if it was the reason
+Local cluster stuck in WaitCheckin
+fleet-agent-bundle stuck in Waitapplied
+fleet controller logs: 
+time="2023-10-26T09:57:39Z" level=error msg="Failed to register agent: registration failed: cannot create clusterregistration on management cluster for cluster id 'bklbrq5jxpm75sg9tf7xx42hfmsgrqxbhnfg9wp7vf8dasdsadsa': Post \"https://192.168.1.100:30658/apis/fleet.cattle.io/v1alpha1/namespaces/fleet-local/clusterregistrations\": dial tcp 192.168.1.100:30658: connect: connection refused"
+SOLUTION:
+Change import-fleet-agent secret certificate CA to your apiserver.cert and the IP address to the advertise addres of apiserver (stated on kube-apiserver.yaml smtg like https://192.168.1.100:6443)
